@@ -1,7 +1,7 @@
-package tst;
+package tcp;
 
+import app.client.EchoClient;
 import org.junit.*;
-import src.client.EchoClient;
 
 import java.io.IOException;
 
@@ -25,6 +25,4 @@ public class TcpTests {
     public void tearDown() throws IOException {
         client.stopConnection();
     }
-
-    @Test
 }
