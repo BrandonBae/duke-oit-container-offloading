@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="duke-oit-container-offloading:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/duke_oit_container_offloading_jar</output-path>
+    <root id="archive" name="duke-oit-container-offloading.jar">
+      <element id="module-output" name="duke-oit-container-offloading" />
+    </root>
+  </artifact>
+</component>

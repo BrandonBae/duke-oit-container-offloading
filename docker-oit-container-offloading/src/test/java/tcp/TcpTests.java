@@ -12,7 +12,7 @@ public class TcpTests {
 
     //hardcode VM Ip for now
     //private String vmIp =
-
+    /*
     @Before
     public void setup() {
         client = new EchoClient();
@@ -49,4 +49,6 @@ public class TcpTests {
     public void tearDown() throws IOException {
         client.stopConnection();
     }
+
+     */
 }

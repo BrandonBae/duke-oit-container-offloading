@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: tcp.TcpTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.978 s <<< FAILURE! - in tcp.TcpTests
+givenClient_whenServerEchosMessage_thenCorrect(tcp.TcpTests)  Time elapsed: 21.977 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.io.PrintWriter.println(String)" because "this.out" is null
+	at tcp.TcpTests.givenClient_whenServerEchosMessage_thenCorrect(TcpTests.java:34)
+
+givenClient_whenServerEchosMessage_thenCorrect(tcp.TcpTests)  Time elapsed: 21.977 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.io.BufferedReader.close()" because "this.in" is null
+	at tcp.TcpTests.tearDown(TcpTests.java:50)
+
