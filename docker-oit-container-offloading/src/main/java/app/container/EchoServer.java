@@ -30,15 +30,16 @@ public class EchoServer {
         clientSocket.close();
         serverSocket.close();
     }
-    /*
+
     public static void main(String[] args) {
         EchoServer server=new EchoServer();
         try {
+            System.out.println("Starting Server");
             server.start(6666);
         } catch(Exception e) {
             e.printStackTrace();
         }
     }
 
-     */
+
 }
