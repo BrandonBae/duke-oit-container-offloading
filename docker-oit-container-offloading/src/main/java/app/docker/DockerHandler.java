@@ -24,11 +24,15 @@ public class DockerHandler {
         this.mountDirectory = containerMountDirectory;
     }
 
+    /// Need to run sudo -i and then run the jar in this root terminal
     public String createContainer() {
         System.out.println("creating Container");
-        HostConfig bindConfig = HostConfig.builder().binds(mountDirectory).build();
+        //HostConfig bindConfig = HostConfig.builder().binds(mountDirectory).build();
+        //HostConfig bindConfig = HostConfig.builder()..build();
         ContainerConfig containerConfig = ContainerConfig.builder()
-                .hostConfig(bindConfig)
+                //.hostConfig(bindConfig)
+                .openStdin(true)
+                .tty(true)
                 .image(imageName)
                 .build();
         ContainerCreation response = null;
@@ -43,15 +47,10 @@ public class DockerHandler {
         return response.id();
     }
 
-    public void stopContainer(String containerId) {
-        try {
-            dockerClient.killContainer(containerId);
-            dockerClient.removeContainer(containerId);
-        } catch (DockerException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public void stopContainer(String containerId) throws DockerException, InterruptedException {
+        dockerClient.killContainer(containerId);
+        dockerClient.removeContainer(containerId);
+
     }
 
     public static void main(String[] args) {
