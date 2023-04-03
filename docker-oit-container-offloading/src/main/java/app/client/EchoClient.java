@@ -46,7 +46,8 @@ public class EchoClient {
             String[] parsedCommand = command.split(" ");
             try {
                 if (parsedCommand[0].equals("startCloud") || parsedCommand[0].equals("endCloud")) {
-                    client.sendMessage(command);
+                    String response = client.sendMessage(command);
+                    System.out.println(response);
                 } else if(parsedCommand[0].equals("exit")) {
                     client.stopConnection();
                     System.out.println("Successfully stopped connection");
