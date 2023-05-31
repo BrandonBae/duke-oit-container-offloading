@@ -1,8 +1,8 @@
 # Cloud to Edge Container Offloading
 
-To read about this project in more detail and find evaluations for this design refer to our paper which can be found [here](https://github.com/BrandonBae/duke-oit-container-offloading/blob/main/Cloud_to_Edge_Container_Offloading_Report.pdf)
+To read about this project in more detail and find evaluations for this design refer to our paper which can be found [here](https://github.com/BrandonBae/duke-oit-container-offloading/blob/main/Cloud_to_Edge_Container_Offloading_Report.pdf).
 
-![Figure 1: High Level Design](https://hackmd.io/_uploads/B1UvH7V8n.jpg)
+![Figure 1: High Level Design](Figures/hld.jpg)
 ##### Figure 1: High Level Design
 
 This work explores an application that offloads cloud based containers to local edge devices such as laptops or desktops in order to reduce perceived latency for clients and increase performance for the cloud. In smaller computing clusters, it is feasible for a non-substantial amount of containers to lead to resource contention which can lead to increased latency for clients. In order to address this situation, we will explore the potential of offloading these cloud based containers to local devices. 
@@ -11,7 +11,7 @@ Figure 1 provides a high level overview of how we implemented this application. 
 and CPU usage which when crossed, triggers an alert. When resource contention is detected, the application alerts clients of potential latency increases and asks if they would like to offload their container to their local
 device. If the client chooses to offload, the application closes the client’s container on the cloud and redeploys the container on the client’s device with a shared file system
 
-![](https://hackmd.io/_uploads/SyTlDXV8h.png)
+![](Figures/workflow.png)
 ##### Figure 2: Offloading Workflow
 Figure 2 provides the general offloading workflow for our application:
 1. **User Interfaces with ClientManager:** The user will use the startCloudContainer() operation to begin the workflow to create their cloud container.
